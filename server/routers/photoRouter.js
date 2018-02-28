@@ -5,11 +5,13 @@ const router = express.Router();
 
 router.route('/')
   .get((req, res) => {
-    Photos.findAll((err, data) => {
+    let id = req.query.place_id;
+    Photos.findOne(id, (err, data) => {
       if (err) {
         console.error(err);
       } else {
         res.json(data);
+        // console.log(data)
       }
     });
   });

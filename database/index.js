@@ -29,7 +29,7 @@ function findAll(callback) {
 // findOne will retrieve the photo associated with the given id
 function findOne(id, callback) {
   Photos.find({
-    id: id,
+    place_id: id,
   }, callback);
 }
 
