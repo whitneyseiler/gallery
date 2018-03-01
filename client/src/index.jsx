@@ -14,11 +14,11 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentSite: '89973595f951d4c77ea41659a2967f56cfe53bab',
+      currentSite: 'a9dbcfebeadf2c2e488dd47116305abb181a0cbb',
       currentImage: 0,
       data: [],
       photos: [],
-      firstFive: [],
+      mainGridImages: [],
     };
     this.counterClick = this.counterClick.bind(this);
     this.closeLightbox = this.closeLightbox.bind(this);
@@ -43,33 +43,38 @@ class App extends React.Component {
         });
       })
       .then(() => {
-        const urls = [];
-        const pics = this.state.data.photos;
-
-        for (let i = 0; i < pics.length; i += 1) {
-          const url = {
-            src: pics[i].url,
-            width: pics[i].width,
-            height: pics[i].height,
-          };
-          urls.push(url);
-        }
-        this.setState({
-          photos: urls,
-        });
-        this.getFirstFive();
+        this.getPhotos();
       })
       .catch((error) => {
         console.error(error);
       });
   }
 
-  getFirstFive() {
-    const firstFive = [];
-    for (let i = 0; i < 8; i += 1) {
-      firstFive.push(this.state.photos[i]);
+  getPhotos() {
+    const urls = [];
+    const pics = this.state.data.photos;
+
+    for (let i = 0; i < pics.length; i += 1) {
+      const url = {
+        src: pics[i].url,
+        width: pics[i].width,
+        height: pics[i].height,
+        caption: null,
+      };
+      urls.push(url);
     }
-    this.setState({ firstFive: firstFive });
+    this.setState({
+      photos: urls,
+    });
+    this.populateMainGrid();
+  }
+
+  populateMainGrid() {
+    const display = [];
+    for (let i = 0; i < 8; i += 1) {
+      display.push(this.state.photos[i]);
+    }
+    this.setState({ mainGridImages: display });
   }
 
   counterClick() {
@@ -109,13 +114,19 @@ class App extends React.Component {
     return (
       <div>
         <div className="gallery" >
-          <Gallery photos={this.state.firstFive} onClick={this.openLightbox} columns={4} rows={2} />
+          <Gallery
+            photos={this.state.mainGridImages}
+            onClick={this.openLightbox}
+            columns={5}
+            rows={2}
+          />
           <div className="photo-counter" onClick={this.counterClick}>
             {photoCount} PHOTOS &#43;
           </div>
         </div>
         <div>
           <Lightbox
+            // images={this.state.photos.map(x => ({ caption: x.caption }))}
             images={this.state.photos}
             onClose={this.closeLightbox}
             onClickPrev={this.gotoPrevious}
