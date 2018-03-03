@@ -129,7 +129,8 @@ class App extends React.Component {
 
   render() {
     const photoCount = this.state.photos.length;
-
+    const isOpen = this.state.lightboxIsOpen;
+    
     return (
       <div>
         <div className="gallery" >
