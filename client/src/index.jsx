@@ -1,37 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Gallery from 'react-photo-gallery';
-import Lightbox from 'react-images';
-import axios from 'axios'
-// import MainGridView from './components/MainGridView.js'
-// import GridView from './components/GridView.js'
-// import SlideshowView from './components/SlideshowView.js'
-
-// var photolinks =     '',    'https://lh3.ggpht.com/p/AF1QipMO_ylP9BAirkXfFpy18WFzQQrhl4-6uJICGnmL=w1400']
-
+import axios from 'axios';
+import GridView from './components/GridView.jsx';
+import SlideShowView from './components/SlideShowView.jsx';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentSite: '3344890deedcb97b1c2d64814f92a02510ba39c8',
+      data: [],
+      currentSite: 'a9dbcfebeadf2c2e488dd47116305abb181a0cbb',
+      siteName: '',
+      reviews: [],
+      photos: [],
       currentImage: 0,
-      data: null,
-      dbphotos: null,
-      photos: [
-        {
-          src: 'https://lh3.ggpht.com/p/AF1QipMO_ylP9BAirkXfFpy18WFzQQrhl4-6uJICGnmL=w1400', caption: 'whitneyseiler', title: 'Cavalier', width: 4, height: 3,
-        },
-        { src: 'https://lh3.ggpht.com/p/AF1QipPIeC9RHwUnc3qqExtiFmwBKFhTWsn8S2YHh7mh=w1400', width: 4, height: 5 },
-        { src: 'https://lh3.ggpht.com/p/AF1QipNahLqRuVD5r6oABCOSwC6QXVhPrgd3CE49W_r6=w1400', width: 4, height: 3 },
-        { src: 'https://lh3.ggspht.com/p/AF1QipOE3gzwQNa0h3HrrtzitYf0Rtu9V1TYDeUXhOSZ=w1400', width: 3, height: 4 },
-        { src: 'https://lh3.ggpht.com/p/AF1QipMqYkI9Trl30tBwaqJiaijGzqVdxj5FM0eQRE3y=w1400', width: 5, height: 3 },
-        { src: 'https://lh3.ggpht.com/p/AF1QipNdx7C-wLscfWo0bie9k_dOSeLTZcUNAJhqmvyt=w1400', width: 4, height: 3 },
-        { src: 'https://lh3.ggpht.com/p/AF1QipMNPXB-MH2Jb6-s4IopD0zSYSYy8lHDmZcy4fKR=w1400', width: 3, height: 4 },
-        { src: 'https://lh3.ggpht.com/p/AF1QipMUlpjPM3gwMRFbC3t8MfPNyjOpGrLAiNqnCSsJ=w216-h384-n', width: 3, height: 4 },
-        { src: 'https://lh3.ggpht.com/p/AF1QipPie_rmjp5d4lqLAGIom5F4ruuD4m8Y2jAljxOo=w1400', width: 4, height: 3 },
-      ],
+      lightboxIsOpen: false,
+      mainGridImages: [],
     };
+    this.counterClick = this.counterClick.bind(this);
     this.closeLightbox = this.closeLightbox.bind(this);
     this.openLightbox = this.openLightbox.bind(this);
     this.gotoNext = this.gotoNext.bind(this);
@@ -50,8 +37,12 @@ class App extends React.Component {
     })
       .then((response) => {
         context.setState({
-          data: response.data,
+          data: response.data[0],
+          siteName: response.data[0].place_name,
         });
+      })
+      .then(() => {
+        this.getReviews();
         this.getPhotos();
       })
       .catch((error) => {
@@ -59,21 +50,57 @@ class App extends React.Component {
       });
   }
 
-  getPhotos() {
+  getReviews() {
+    const siteReviews = this.state.data.reviews;
     this.setState({
-      dbphotos: this.state.data[0].photos
+      reviews: siteReviews,
     });
-    this.getFirstFivePhotos();
   }
 
-  getFirstFivePhotos() {
-    const firstFive = [];
-    for (let i = 0; i < 5; i += 1) {
-      firstFive.push(this.state.dbphotos[i]);
+  getRandomCaption() {
+    const reviews = this.state.reviews;
+    const randomReview = reviews[Math.floor(Math.random() * reviews.length)];
+    const name = randomReview.name.toUpperCase();
+    const randomCaption = (
+      <div className="author-details">
+        <img src={randomReview.avatar} alt="" className="avatar" />
+        <div className="name">{name}</div>
+      </div>);
+    return randomCaption;
+  }
+
+  getPhotos() {
+    const urls = [];
+    const pics = this.state.data.photos;
+
+    for (let i = 0; i < pics.length; i += 1) {
+      const url = {
+        src: pics[i].url,
+        width: pics[i].width,
+        height: pics[i].height,
+        caption: this.getRandomCaption(),
+      };
+      urls.push(url);
     }
     this.setState({
-      firstFive: firstFive,
-    })
+      photos: urls,
+    });
+    this.populateMainGrid();
+  }
+
+  populateMainGrid() {
+    const display = [];
+    for (let i = 0; i < 8; i += 1) {
+      display.push(this.state.photos[i]);
+    }
+    this.setState({ mainGridImages: display });
+  }
+
+  counterClick() {
+    this.setState({
+      currentImage: 0,
+      lightboxIsOpen: true,
+    });
   }
 
   openLightbox(event, obj) {
@@ -82,6 +109,7 @@ class App extends React.Component {
       lightboxIsOpen: true,
     });
   }
+
   closeLightbox() {
     this.setState({
       currentImage: 0,
@@ -99,24 +127,35 @@ class App extends React.Component {
     });
   }
 
-
   render() {
-
+    const photoCount = this.state.photos.length;
+    const isOpen = this.state.lightboxIsOpen;
+    
     return (
       <div>
-        <div className="grid">
-          <Gallery photos={this.state.photos} onClick={this.openLightbox} className="grid" columns={5} rows={1} />
-        </div>
-        <div>
-          <Lightbox
-            images={this.state.photos}
-            onClose={this.closeLightbox}
-            onClickPrev={this.gotoPrevious}
-            onClickNext={this.gotoNext}
-            currentImage={this.state.currentImage}
-            isOpen={this.state.lightboxIsOpen}
+        <div className="gallery" >
+          <Gallery
+            photos={this.state.mainGridImages}
+            onClick={this.openLightbox}
+            columns={5}
           />
+          <div className="photo-counter" onClick={this.counterClick}>
+            {photoCount} PHOTOS &#43;
+          </div>
         </div>
+        <SlideShowView
+          photos={this.state.photos}
+          closeLightbox={this.closeLightbox}
+          clickPrev={this.gotoPrevious}
+          clickNext={this.gotoNext}
+          current={this.state.currentImage}
+          isLightboxOpen={this.state.lightboxIsOpen}
+          placeName={this.state.siteName}
+        />
+        <GridView
+          photos={this.state.photos}
+          isOpen={this.state.lightboxIsOpen}
+        />
       </div>
     );
   }

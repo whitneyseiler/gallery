@@ -5,6 +5,8 @@ mongoose.connect('mongodb://localhost/photos');
 const PhotosSchema = mongoose.Schema({
   ref: String,
   url: String,
+  width: Number,
+  height: Number,
 });
 
 const ReviewSchema = mongoose.Schema({
