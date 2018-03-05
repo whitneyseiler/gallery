@@ -39,6 +39,7 @@ class App extends React.Component {
           data: response.data[0],
           siteName: response.data[0].place_name,
         });
+        console.log(JSON.stringify(response.data[0]))
       })
       .then(() => {
         this.setReviewsState();
@@ -54,6 +55,7 @@ class App extends React.Component {
     this.setState({
       reviews: siteReviews,
     });
+    console.log(this.state.data)
   }
 
   setPhotosState() {
@@ -127,7 +129,7 @@ class App extends React.Component {
     const photoCount = this.state.photos.length;
 
     return (
-      <div>
+      <div id="main-app">
         <div className="gallery" >
           <Gallery
             photos={this.state.mainGridImages}

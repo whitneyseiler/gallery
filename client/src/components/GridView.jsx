@@ -3,7 +3,7 @@ import React from 'react'
 function GridView({ photos, isOpen }) {
   return (
     <div className="grid-view">
-      <h3>Grid View</h3>
+      <h3></h3>
     </div>
   )
 }
