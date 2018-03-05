@@ -5,5 +5,12 @@
 	"plugins": [
 		"react",
 		"import",
-	]
+    "jest",
+	],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+  }
 }

@@ -7,7 +7,7 @@ function SlideShowView(props) {
   const placeName = <div className="place-name">{name}</div>;
 
   return (
-    <div>
+    <div id="slideshow">
       <Lightbox
         images={props.photos}
         onClose={() => props.closeLightbox()}
