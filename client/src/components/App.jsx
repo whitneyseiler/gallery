@@ -39,7 +39,6 @@ class App extends React.Component {
           data: response.data[0],
           siteName: response.data[0].place_name,
         });
-        console.log(JSON.stringify(response.data[0]))
       })
       .then(() => {
         this.setReviewsState();

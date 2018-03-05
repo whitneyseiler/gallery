@@ -8,7 +8,7 @@ router.route('/')
     let id = req.query.place_id;
     Photos.findOne(id, (err, data) => {
       if (err) {
-        console.error(err);
+        res.sendStatus(500);
       } else {
         res.json(data);
         // console.log(data)
