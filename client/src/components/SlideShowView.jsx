@@ -6,7 +6,7 @@ function SlideShowView(props) {
   const gridViewButton = (
     <button
       className="grid-view-button"
-      onClick={() => props.handleGridButtonClick()}
+      // onClick={() => props.handleGridButtonClick()}
     ><i className="fa fa-th fa-2x" />
     </button>);
 
@@ -47,4 +47,4 @@ SlideShowView.propTypes = {
   clickNext: PropTypes.func.isRequired,
 };
 
-module.exports = SlideShowView;
+export default SlideShowView;

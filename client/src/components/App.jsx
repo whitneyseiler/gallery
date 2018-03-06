@@ -4,7 +4,7 @@ import Gallery from '../../../lib/react-photo-gallery';
 import SlideShowView from './SlideShowView';
 // import ModalGridView from './GridModal';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -156,5 +156,3 @@ class App extends React.Component {
     );
   }
 }
-
-module.exports = App;
