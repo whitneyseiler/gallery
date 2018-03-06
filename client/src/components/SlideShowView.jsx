@@ -33,14 +33,18 @@ function SlideShowView(props) {
 }
 
 SlideShowView.propTypes = {
-  photos: PropTypes.shape.isRequired,
+  photos: PropTypes.arrayOf(PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    caption: PropTypes.object.isRequired,
+  })).isRequired,
   current: PropTypes.number.isRequired,
   placeName: PropTypes.string.isRequired,
   isLightboxOpen: PropTypes.bool.isRequired,
   closeLightbox: PropTypes.func.isRequired,
   clickPrev: PropTypes.func.isRequired,
   clickNext: PropTypes.func.isRequired,
-  handleGridButtonClick: PropTypes.func.isRequired,
 };
 
 module.exports = SlideShowView;
