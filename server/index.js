@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use('/api/photo', photoRouter);
 
-app.get('/', (req, res) => res.statusCode(200).send('Hello World!'));
+app.get('/', (req, res) => res.status(200).send('Hello World!'));
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
