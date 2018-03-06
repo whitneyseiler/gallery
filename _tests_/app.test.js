@@ -6,13 +6,13 @@ import App from '../client/src/components/App';
 configure({ adapter: new Adapter() });
 
 describe('Photo Gallery App', () => {
-  it('should render a .slideshow class', () => {
+  it('should render a .slideshow class', async () => {
     const component = mount(<App />);
-    expect(component.find('.slideshow').length).toEqual(1);
+    await expect(component.find('.slideshow').length).toEqual(1);
   });
 
-  it('should render a .gallery class', () => {
+  it('should render a .gallery class', async () => {
     const component = mount(<App />);
-    expect(component.find('.gallery').length).toEqual(1);
+    await expect(component.find('.gallery').length).toEqual(1);
   });
 });
