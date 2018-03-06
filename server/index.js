@@ -17,6 +17,6 @@ app.use('/api/photo', photoRouter);
 
 app.get('/', (req, res) => res.statusCode(200).send('Hello World!'));
 
-const server = app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
-module.exports = server;
+module.exports = app;
