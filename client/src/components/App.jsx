@@ -1,8 +1,8 @@
 import React from 'react';
-import Gallery from 'react-photo-gallery';
 import axios from 'axios';
-import GridView from './GridView.jsx';
-import SlideShowView from './SlideShowView.jsx';
+import Gallery from '../../../lib/react-photo-gallery';
+import SlideShowView from './SlideShowView';
+// import ModalGridView from './GridModal';
 
 class App extends React.Component {
   constructor() {
@@ -54,7 +54,6 @@ class App extends React.Component {
     this.setState({
       reviews: siteReviews,
     });
-    console.log(this.state.data)
   }
 
   setPhotosState() {
@@ -135,7 +134,11 @@ class App extends React.Component {
             onClick={this.openLightbox}
             columns={5}
           />
-          <div className="photo-counter" onClick={this.galleryImageCountClick}>
+          <div
+            className="photo-counter"
+            onClick={this.galleryImageCountClick}
+            role="presentation"
+          >
             {photoCount} PHOTOS &#43;
           </div>
         </div>
@@ -147,10 +150,7 @@ class App extends React.Component {
           current={this.state.currentImage}
           isLightboxOpen={this.state.lightboxIsOpen}
           placeName={this.state.siteName}
-        />
-        <GridView
-          photos={this.state.photos}
-          isOpen={this.state.lightboxIsOpen}
+          className="slideshow"
         />
       </div>
     );

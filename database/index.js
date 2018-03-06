@@ -15,7 +15,10 @@ const ReviewSchema = mongoose.Schema({
 });
 
 const photoSchema = mongoose.Schema({
-  place_id: String,
+  place_id: {
+    type: String,
+    unique: true,
+  },
   place_name: String,
   photos: [PhotosSchema],
   reviews: [ReviewSchema],
