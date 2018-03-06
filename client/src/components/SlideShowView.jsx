@@ -43,4 +43,4 @@ SlideShowView.propTypes = {
   handleGridButtonClick: PropTypes.func.isRequired,
 };
 
-export default SlideShowView;
+module.exports = SlideShowView;
