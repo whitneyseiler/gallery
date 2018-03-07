@@ -12,7 +12,7 @@ describe('Photo Gallery App', () => {
   const mock = new MockAdapter(axios);
   const data = testData;
 
-  mock.onGet('/api/photo').reply(200, data);
+  // mock.onGet('/api/photo').reply(200, data);
 
   it('should render correctly', () => {
     const wrapper = shallow(<App />);

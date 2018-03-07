@@ -27,18 +27,17 @@ export default class App extends React.Component {
   // send GET request to server on page load
   componentDidMount() {
     const context = this;
-    const id = this.state.currentSite;
+    // const id = this.state.currentSite;
+    const id = window.location.href.split('/')[3];
+    console.log(id)
 
-    axios.get('/api/photo', {
-      params: {
-        place_id: id,
-      },
-    })
+    axios.get(`/api/restaurants/:${id}/gallery`)
       .then((response) => {
         context.setState({
           data: response.data[0],
           siteName: response.data[0].place_name,
         });
+        baseURL= '/restaurants/' + id;
       })
       .then(() => {
         this.setReviewsState();

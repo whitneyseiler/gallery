@@ -54,23 +54,4 @@ function getJSONFromAPI(url, key, callback) {
       }
     });
   });
-  // .then((seedData) => {
-  //   // fs.writeFile('./seedData.txt', seedData, (err) => {
-  //   //   if (err) {
-  //   //     console.error(err);
-  //   //     return;
-  //   //   }
-  //   //   console.log('File has been created');
-  //   // });
-  //   console.log('SEED DATA:', seedData)
-  // });
 }
-
-// getJSONFromAPI(API_URL, API_KEY, (err, res) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log("RES", res)
-//   }
-//   // mongoose.disconnect();
-// });

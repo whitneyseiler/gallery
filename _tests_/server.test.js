@@ -5,7 +5,7 @@ const testData = require('../data_test.js');
 
 describe('Test the root path with GET', () =>
   test('it should respond to the GET request', () =>
-    request(server).get('/api/photo').then(response =>
+    request(server).get('/api/restaurants/:id').then(response =>
       expect(response.statusCode).toBe(200))));
 
 
