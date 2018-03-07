@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Project Name
 
 > Project description
@@ -37,3 +38,6 @@ npm install -g webpack
 npm install
 ```
 
+=======
+# WeGot-WhitneyProxy
+>>>>>>> 7881e60e0964b73bbd079f13b01c5eccabc9a5b1
