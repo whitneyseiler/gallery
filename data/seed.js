@@ -6,7 +6,6 @@ mongoose.connect('mongodb://localhost/photos');
 
 function seedDb() {
   data.forEach((place) => { // for each ID
-    // console.log(place.result.place_id)
     const entry = {
       place_id: place.result.place_id,
       place_name: place.result.name,
