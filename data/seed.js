@@ -40,6 +40,7 @@ function seedDb() {
       };
       entry.reviews.push(review);
     }
+    console.log('ENTRY:', entry)
 
     Photos.insertOne(entry, (err) => {
       if (err) {
@@ -50,3 +51,5 @@ function seedDb() {
 };
 
 seedDb(data);
+
+module.exports = seedDb;
