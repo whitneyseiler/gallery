@@ -143,8 +143,7 @@ export default class App extends React.Component {
             className="photo-counter"
             onClick={this.galleryImageCountClick}
             role="presentation"
-          >
-            {photoCount} PHOTOS &#43;
+          >{photoCount} PHOTOS &#43;
           </div>
         </div>
         <SlideShowView
