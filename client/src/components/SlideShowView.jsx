@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import Lightbox from '../../../lib/react-images';
 
 function SlideShowView(props) {
+  // for future modal grid gallery view
   const gridViewButton = (
     <button
       className="grid-view-button"
-      // onClick={() => props.handleGridButtonClick()}
+      onClick={() => props.gridButtonClick()}
     ><i className="fa fa-th fa-2x" />
     </button>);
 
@@ -45,6 +46,7 @@ SlideShowView.propTypes = {
   closeLightbox: PropTypes.func.isRequired,
   clickPrev: PropTypes.func.isRequired,
   clickNext: PropTypes.func.isRequired,
+  gridButtonClick: PropTypes.func.isRequired,
 };
 
 export default SlideShowView;

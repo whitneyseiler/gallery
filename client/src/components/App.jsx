@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Gallery from '../../../lib/react-photo-gallery';
 import SlideShowView from './SlideShowView';
-// import ModalGridView from './GridModal';
+import TopNav from './TopNav';
 
 export default class App extends React.Component {
   constructor() {
@@ -47,6 +47,11 @@ export default class App extends React.Component {
       .catch((error) => {
         console.error(error);
       });
+  }
+
+  onGridButtonClick() {
+    this.closeLightbox();
+    // in future this will render Modal Grid View
   }
 
   setReviewsState() {
@@ -125,10 +130,10 @@ export default class App extends React.Component {
 
   render() {
     const photoCount = this.state.photos.length;
-
     return (
       <div id="main-app">
         <div className="gallery" >
+          <TopNav />
           <Gallery
             photos={this.state.mainGridImages}
             onClick={this.openLightbox}
@@ -150,6 +155,7 @@ export default class App extends React.Component {
           current={this.state.currentImage}
           isLightboxOpen={this.state.lightboxIsOpen}
           placeName={this.state.siteName}
+          gridButtonClick={this.onGridButtonClick}
           className="slideshow"
         />
       </div>

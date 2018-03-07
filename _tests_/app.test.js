@@ -1,18 +1,21 @@
 import React from 'react';
-import { configure, mount, shallow } from 'enzyme';
+import axios from 'axios';
+import MockAdapter from 'axios-mock-adapter';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import App from '../client/src/components/App';
+import testData from '../data_test';
 
 configure({ adapter: new Adapter() });
 
 describe('Photo Gallery App', () => {
-  it('should render a .slideshow class', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find('.slideshow').length).toEqual(1);
-  });
+  const mock = new MockAdapter(axios);
+  const data = testData;
 
-  it('should render a .gallery class', () => {
+  mock.onGet('/api/photo').reply(200, data);
+
+  it('should render correctly', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('.gallery').length).toEqual(1);
+    expect(wrapper).toMatchSnapshot();
   });
 });
