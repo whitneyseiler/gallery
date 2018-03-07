@@ -1,23 +1,22 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const Photos = require('../../database/index.js');
-const router = express.Router();
-
-router.route('/')
-  .get((req, res) => {
-    let id = req.query.place_id;
-    Photos.findOne(id, (err, data) => {
-      if (err) {
-        res.sendStatus(500);
-      } else {
-        res.json(data);
-        // console.log(data)
-      }
-    });
-  });
-
-// Here we use express's route params
-router.route('/:id')
-  .get((req, res) => {console.log('hello from server'); });
-
-module.exports = router;
+// const express = require('express');
+// const mongoose = require('mongoose');
+// const Photos = require('../../database/index.js');
+// const router = express.Router();
+//
+// router.route('/')
+//   .get((req, res) => {
+//     const id = req.params.id;
+//     console.log(id)
+//     Photos.findOne(id, (err, data) => {
+//       console.log("params:", req.params)
+//       console.log("hello from router")
+//       if (err) {
+//         res.sendStatus(500);
+//       } else {
+//         res.json(data);
+//         console.log(data)
+//       }
+//     });
+//   });
+//
+// module.exports = router;

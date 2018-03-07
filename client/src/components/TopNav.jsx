@@ -4,7 +4,13 @@ function TopNav() {
   return (
     <div id="top-nav" style={{ height: 110, background: 'white' }}>
       <div id="logo">
-        <img src="small_logo.png" alt="" className="logo" />
+        <img src="http://res.cloudinary.com/madlicorice/image/upload/v1520454562/small_logo.png" alt="" className="logo" />
+      </div>
+      <div className="search-container">
+        <form>
+          <input type="text" placeholder="Find a great place near you" name="search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </div>
       <div id="nav-buttons">
         <button className="nav-button">NEW & HOT</button>

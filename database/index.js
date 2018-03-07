@@ -33,6 +33,7 @@ function findAll(callback) {
 
 // findOne will retrieve the photo associated with the given id
 function findOne(id, callback) {
+  console.log('finding by id:', id)
   Photos.find({
     place_id: id,
   }, callback);
