@@ -21,10 +21,9 @@ ShallowWrapper {
         <div
           className="gallery"
         >
-          <TopNav />
           <Gallery
-            columns={4}
-            margin={3}
+            columns={5}
+            margin={2}
             onClick={[Function]}
             photos={Array []}
           />
@@ -43,7 +42,6 @@ ShallowWrapper {
           clickPrev={[Function]}
           closeLightbox={[Function]}
           current={0}
-          gridButtonClick={[Function]}
           isLightboxOpen={false}
           photos={Array []}
           placeName=""
@@ -59,10 +57,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <TopNav />,
             <Gallery
-              columns={4}
-              margin={3}
+              columns={5}
+              margin={2}
               onClick={[Function]}
               photos={Array []}
             />,
@@ -82,19 +79,10 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "columns": 4,
-              "margin": 3,
+              "columns": 5,
+              "margin": 2,
               "onClick": [Function],
               "photos": Array [],
             },
@@ -135,7 +123,6 @@ ShallowWrapper {
           "clickPrev": [Function],
           "closeLightbox": [Function],
           "current": 0,
-          "gridButtonClick": [Function],
           "isLightboxOpen": false,
           "photos": Array [],
           "placeName": "",
@@ -157,10 +144,9 @@ ShallowWrapper {
           <div
             className="gallery"
           >
-            <TopNav />
             <Gallery
-              columns={4}
-              margin={3}
+              columns={5}
+              margin={2}
               onClick={[Function]}
               photos={Array []}
             />
@@ -179,7 +165,6 @@ ShallowWrapper {
             clickPrev={[Function]}
             closeLightbox={[Function]}
             current={0}
-            gridButtonClick={[Function]}
             isLightboxOpen={false}
             photos={Array []}
             placeName=""
@@ -195,10 +180,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <TopNav />,
               <Gallery
-                columns={4}
-                margin={3}
+                columns={5}
+                margin={2}
                 onClick={[Function]}
                 photos={Array []}
               />,
@@ -218,19 +202,10 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "columns": 4,
-                "margin": 3,
+                "columns": 5,
+                "margin": 2,
                 "onClick": [Function],
                 "photos": Array [],
               },
@@ -271,7 +246,6 @@ ShallowWrapper {
             "clickPrev": [Function],
             "closeLightbox": [Function],
             "current": 0,
-            "gridButtonClick": [Function],
             "isLightboxOpen": false,
             "photos": Array [],
             "placeName": "",

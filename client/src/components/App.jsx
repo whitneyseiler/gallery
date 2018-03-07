@@ -9,6 +9,7 @@ export default class App extends React.Component {
     super();
     this.state = {
       data: [],
+      // currentSite: 'a9dbcfebeadf2c2e488dd47116305abb181a0cbb',
       siteName: '',
       reviews: [],
       photos: [],
@@ -28,6 +29,7 @@ export default class App extends React.Component {
     const context = this;
     // const id = this.state.currentSite;
     const id = window.location.href.split('/')[4];
+    console.log(id)
 
     axios.get(`/api/restaurants/${id}/gallery`)
       .then((response) => {
@@ -35,6 +37,7 @@ export default class App extends React.Component {
           data: response.data[0],
           siteName: response.data[0].place_name,
         });
+        console.log("DATA:", response.data[0])
       })
       .then(() => {
         this.setReviewsState();

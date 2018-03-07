@@ -7,11 +7,11 @@ const fs = require('fs');
 
 mongoose.connect('mongodb://localhost/photos');
 
-const API_KEY = 'AIzaSyCjAQ33tNqsfUoF1CV0TDw8GcoHqSf3dgo';
+const API_KEY = 'AIzaSyCjAQ33tNqsfUoF1CV0TDw8GcoHqSf3dgo'
 
-const API_URL = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=';
+const API_URL = 'https://maps.googleapis.com/maps/api/place/details/json?placeid='
 
-const PHOTOS_URL = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=';
+const PHOTOS_URL = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference='
 
 function isJSONResponse(headers) {
   return headers['content-type'].includes('json');
@@ -20,7 +20,7 @@ function isJSONResponse(headers) {
 function getJSONFromAPI(url, key, callback) {
   const seedData = [];
   IDS.forEach((ID) => { // for each ID
-    const FULL_URL = `${API_URL}${ID}&key=${API_KEY}`;
+    const FULL_URL = API_URL + ID + '&key=' + API_KEY
 
     rp.get(FULL_URL, (err, response, body) => {
       if (err) {
@@ -28,7 +28,7 @@ function getJSONFromAPI(url, key, callback) {
       } else if (!isJSONResponse(response.headers)) {
         callback(new Error('Response did not contain JSON data.'), null);
       } else {
-        const data = JSON.parse(body);
+        data = JSON.parse(body);
 
         const entry = {
           place_id: data.result.id,
@@ -46,7 +46,7 @@ function getJSONFromAPI(url, key, callback) {
         // push photo details to entry
         for (let k = 0; k < data.result.photos.length; k += 1) {
           const photoRef = data.result.photos[k].photo_reference;
-          const photoUrl = `${PHOTOS_URL}${photoRef}&key=${API_KEY}`;
+          const photoUrl = PHOTOS_URL + photoRef+ '&key=' + API_KEY;
           const details = { ref: photoRef, url: photoUrl };
           entry.photos.push(details);
         }
@@ -54,4 +54,23 @@ function getJSONFromAPI(url, key, callback) {
       }
     });
   });
+  // .then((seedData) => {
+  //   // fs.writeFile('./seedData.txt', seedData, (err) => {
+  //   //   if (err) {
+  //   //     console.error(err);
+  //   //     return;
+  //   //   }
+  //   //   console.log('File has been created');
+  //   // });
+  //   console.log('SEED DATA:', seedData)
+  // });
 }
+
+// getJSONFromAPI(API_URL, API_KEY, (err, res) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log("RES", res)
+//   }
+//   // mongoose.disconnect();
+// });

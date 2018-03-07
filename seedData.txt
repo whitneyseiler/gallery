@@ -1,0 +1,349 @@
+{
+   "html_attributions" : [],
+   "result" : {
+      "address_components" : [
+         {
+            "long_name" : "342",
+            "short_name" : "342",
+            "types" : [ "street_number" ]
+         },
+         {
+            "long_name" : "Howard Street",
+            "short_name" : "Howard St",
+            "types" : [ "route" ]
+         },
+         {
+            "long_name" : "South of Market",
+            "short_name" : "South of Market",
+            "types" : [ "neighborhood", "political" ]
+         },
+         {
+            "long_name" : "San Francisco",
+            "short_name" : "SF",
+            "types" : [ "locality", "political" ]
+         },
+         {
+            "long_name" : "San Francisco County",
+            "short_name" : "San Francisco County",
+            "types" : [ "administrative_area_level_2", "political" ]
+         },
+         {
+            "long_name" : "California",
+            "short_name" : "CA",
+            "types" : [ "administrative_area_level_1", "political" ]
+         },
+         {
+            "long_name" : "United States",
+            "short_name" : "US",
+            "types" : [ "country", "political" ]
+         },
+         {
+            "long_name" : "94105",
+            "short_name" : "94105",
+            "types" : [ "postal_code" ]
+         }
+      ],
+      "adr_address" : "\u003cspan class=\"street-address\"\u003e342 Howard St\u003c/span\u003e, \u003cspan class=\"locality\"\u003eSan Francisco\u003c/span\u003e, \u003cspan class=\"region\"\u003eCA\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e94105\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eUSA\u003c/span\u003e",
+      "formatted_address" : "342 Howard St, San Francisco, CA 94105, USA",
+      "formatted_phone_number" : "(415) 908-3900",
+      "geometry" : {
+         "location" : {
+            "lat" : 37.7894465,
+            "lng" : -122.3950747
+         },
+         "viewport" : {
+            "northeast" : {
+               "lat" : 37.7907604802915,
+               "lng" : -122.3936815197085
+            },
+            "southwest" : {
+               "lat" : 37.7880625197085,
+               "lng" : -122.3963794802915
+            }
+         }
+      },
+      "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id" : "7ad7df218f2356bbef0ae17576202e2c28ce39b2",
+      "international_phone_number" : "+1 415-908-3900",
+      "name" : "Town Hall Restaurant",
+      "opening_hours" : {
+         "open_now" : false,
+         "periods" : [
+            {
+               "close" : {
+                  "day" : 0,
+                  "time" : "2100"
+               },
+               "open" : {
+                  "day" : 0,
+                  "time" : "1730"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 1,
+                  "time" : "1430"
+               },
+               "open" : {
+                  "day" : 1,
+                  "time" : "1130"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 1,
+                  "time" : "2200"
+               },
+               "open" : {
+                  "day" : 1,
+                  "time" : "1730"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 2,
+                  "time" : "1430"
+               },
+               "open" : {
+                  "day" : 2,
+                  "time" : "1130"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 2,
+                  "time" : "2200"
+               },
+               "open" : {
+                  "day" : 2,
+                  "time" : "1730"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 3,
+                  "time" : "1430"
+               },
+               "open" : {
+                  "day" : 3,
+                  "time" : "1130"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 3,
+                  "time" : "2200"
+               },
+               "open" : {
+                  "day" : 3,
+                  "time" : "1730"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 4,
+                  "time" : "1430"
+               },
+               "open" : {
+                  "day" : 4,
+                  "time" : "1130"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 4,
+                  "time" : "2200"
+               },
+               "open" : {
+                  "day" : 4,
+                  "time" : "1730"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 5,
+                  "time" : "1430"
+               },
+               "open" : {
+                  "day" : 5,
+                  "time" : "1130"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 5,
+                  "time" : "2200"
+               },
+               "open" : {
+                  "day" : 5,
+                  "time" : "1730"
+               }
+            },
+            {
+               "close" : {
+                  "day" : 6,
+                  "time" : "2200"
+               },
+               "open" : {
+                  "day" : 6,
+                  "time" : "1730"
+               }
+            }
+         ],
+         "weekday_text" : [
+            "Monday: 11:30 AM – 2:30 PM, 5:30 – 10:00 PM",
+            "Tuesday: 11:30 AM – 2:30 PM, 5:30 – 10:00 PM",
+            "Wednesday: 11:30 AM – 2:30 PM, 5:30 – 10:00 PM",
+            "Thursday: 11:30 AM – 2:30 PM, 5:30 – 10:00 PM",
+            "Friday: 11:30 AM – 2:30 PM, 5:30 – 10:00 PM",
+            "Saturday: 5:30 – 10:00 PM",
+            "Sunday: 5:30 – 9:00 PM"
+         ]
+      },
+      "photos" : [
+         {
+            "height" : 787,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/108578063323799481780/photos\"\u003eTown Hall Restaurant\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAAxORoSrx4EavGmlqpwJoSW94mI_vlV_1az1mEwlRtUntc_lSaaLd04O_9OpILB-SFQtWTmYIQFMaZkWn6dQ4tTu7E1gihDbg8GDY8hWb4cMjaNqIl26KD9JlgYsLK1suREhDQ9hjNZdryF7qcyVuxo6yeGhS66byfLCbnXZtXqPTXcP83DbxTEA",
+            "width" : 800
+         },
+         {
+            "height" : 3036,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/104284460994200180539/photos\"\u003etony ferrelli\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAALpn8X9La4NVHK5vvTBVhpY6gEDyDiu3yC0y3IyYotmgh31ApVw9QsjDgMZT3Wb241tTN5l4yM6dKI03VhJqRtaouNB_tuFHwPFVr4ZEkVnPwHPv9bG7pS8ixN66q9FSjEhC386IDdVCn50MsiLpVTRieGhQbK_xpaDSMeEhGs37l-fObL6DI1A",
+            "width" : 4048
+         },
+         {
+            "height" : 3036,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/100550359459858726981/photos\"\u003eShai Barack\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAA7iRNsQSWN6nBt0L-Dr2uRDW0omUWDhgwDqi5SVZaIJnRp-huFuEs4of8WmxkLc-YzJ7CA7JP24euLD7FP5mmWiRhxRd7_WFC778MLARzsj5ilkZ6J7FcW9n-Xfrz0IZUEhAQ8A12xyHZB_EG1ZqxQi-MGhQ-yLI3QjuABHTe0BIKXLUBYUdp1w",
+            "width" : 4048
+         },
+         {
+            "height" : 1536,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/106170335079428053302/photos\"\u003eCorrie Davidson\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAA6QDu5jM2K679mGkSqIg1yAKjJguR2HXMyvFE-tK1dbqmelCiO1pebhS2s_PQmzisSzITqjiRkmUApBT02kOWpHdq6dkzKJzT8XTJ9YHJJvaUajPN6Gv6R-lkDO6n5kjgEhCHQ3ioh7zKW8qHqBwKZPE9GhT3VFPVibk12xGnS7EFau8PZdijjQ",
+            "width" : 2048
+         },
+         {
+            "height" : 2988,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/100769310211623822340/photos\"\u003eTin Huynh\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAAr-nom7aIinf8pXtb2NX37dW261Fvls2ZvLFgCVh2WmiyVe1cgJRGzNIxrjP1gPKXcqAvV71VoK5BpSt_Q91QKw5x3AaluVJSvEYrJpo4gjeIBewcfEwz6xhhep5sEiENEhAffM5y2S2DuC77rtwmZ0jRGhTxLhm818sPtoyojdn-p57Zrrr-Zw",
+            "width" : 5312
+         },
+         {
+            "height" : 4516,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/108578063323799481780/photos\"\u003eTown Hall Restaurant\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAAl9gV035cdRukUGDPALBRdtWsrvHLPyNIam8FQKwzglhs5aw5vTajkLdNiFWZDK2ugBZdqZt6C9Kr25mM0c9CG8BsrQkV0oeiwylMqkhcuqAwNgaV6a03BbqDb_pMZ0kuEhAR6k1p-On9iMjAVqYA5hH5GhTT8xpwPVxgPtKB1Apww1_o96dKHw",
+            "width" : 4521
+         },
+         {
+            "height" : 3088,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/106158173761172612594/photos\"\u003eStuart Gilbert\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAA4e8MQDceJZ56dMpR6QKS84lvw8tV-pHuyV6NrObxbrWxCI_FJtdzohv1PtmUbLwm_1PGYW38bM0W_UAgn5smuwp45z0VXICHRUNZUdcano2NDKcvgw58QfCCF_-unt-hEhDcBKHM0gly1ugWZru91oH5GhS7MU0RNTIftxU1DsI5GTrJTxX-WA",
+            "width" : 4160
+         },
+         {
+            "height" : 1357,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/108578063323799481780/photos\"\u003eTown Hall Restaurant\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAAQqznx-Hy7CI8Y5e-j-_r_5qXl-EeqoG_MUdZPTZ_XM1vOVT2N-PsuryiKPZFxo6H14EBLIzg1Egg1_aRyV-rMe1rbt23dJD2_kOEqB-jvwyCznChr7FijKNlLqeNMOeyEhBRe6eC-RVPG9FA3YsWYnKwGhR7UA_k9VjhtdHxo0TCp5QtyZNkKg",
+            "width" : 2057
+         },
+         {
+            "height" : 2988,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/108662683396079556797/photos\"\u003eChris Garnica\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAAzJm9OL7loMcWRU7E0jlAcpnIMfbqCidC0lI-KpsNE--wLNI0okzAxIK_yTfufSkPvv3dU5t98qZrB6P01m6o1L_lN-TziCNxiz2GDDc_Qxtu_meVYkrf6P8Wj_1hCb3WEhBDygg5bEZnjqqPbeEbCkQ2GhRoQz3OORByBg1onJH7wxVbK3UHqA",
+            "width" : 5312
+         },
+         {
+            "height" : 4032,
+            "html_attributions" : [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/116310692803943272547/photos\"\u003eVol Tron\u003c/a\u003e"
+            ],
+            "photo_reference" : "CmRaAAAAdwSEJfq2ZzS0oGUg8IcOzgKHTItyHz20VdofjRD98x-OmwW8TToitGpCjkeiRbw8utmUIQQSR3H_A1PzHn8WC0sxgid9bm5yBYboETWz7PgV2u1dFRtR-I4RAwV_8xk7EhBzal5hXZnT4-tN9JXue_95GhS5s6qX0G34exJfvvBQzLzOGdWqMw",
+            "width" : 2268
+         }
+      ],
+      "place_id" : "ChIJs6-YsWSAhYAR_9_dvdFDUww",
+      "price_level" : 3,
+      "rating" : 4.1,
+      "reference" : "CmRRAAAAJgYQoyQQLt3ENeabhCcqAHTuHzifIXUhiHgpHIyWFB3U4izmX54F4V0fWMWn_tH8R_H80l_ZLXGupJeS6_SiJ_89HfsN8d418xiVL1vObmHT5ptsrbugqXR4JCDpn38FEhACU5Ff9yJ41Z-dR9yTM290GhQG5TgIN2Hz7-v3Nh4boxSto8XCeg",
+      "reviews" : [
+         {
+            "author_name" : "Andrew Jaru",
+            "author_url" : "https://www.google.com/maps/contrib/100286887734839567886/reviews",
+            "language" : "en",
+            "profile_photo_url" : "https://lh5.googleusercontent.com/-MCY2yswvYJo/AAAAAAAAAAI/AAAAAAAABBc/c_UVIvcCefE/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+            "rating" : 5,
+            "relative_time_description" : "a month ago",
+            "text" : "Had a great experience here. Everything was on point. Food came out in a timely manner, service was always a step ahead of you, and the ambience was invigorating. The dishes themselves were bustling with flavor. For an appetizer, I had the cornbread which had pockets of rich, salty flavor. Followed my the beef duo for my entree. It was rich and tender with a sampling of different flavors. My date had the buttermilk chicken and waffles which was nice, but not the best thing on the menu. Overall, a great place for a special occasion.",
+            "time" : 1515007221
+         },
+         {
+            "author_name" : "Margaret Lee",
+            "author_url" : "https://www.google.com/maps/contrib/114701241123617315548/reviews",
+            "language" : "en",
+            "profile_photo_url" : "https://lh4.googleusercontent.com/-YzljV3yV7pY/AAAAAAAAAAI/AAAAAAAAYzM/D2kZzVBqkl0/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+            "rating" : 5,
+            "relative_time_description" : "4 weeks ago",
+            "text" : "Get the fried chicken and just know it's an obscene portion. Split it, get a doggie bag, or just own it. So good. Lickin' lips for days.",
+            "time" : 1517211623
+         },
+         {
+            "author_name" : "Jedediah H",
+            "author_url" : "https://www.google.com/maps/contrib/104202954405832583227/reviews",
+            "language" : "en",
+            "profile_photo_url" : "https://lh6.googleusercontent.com/-Is52KKB22f4/AAAAAAAAAAI/AAAAAAAABhg/CKvhcqylGXQ/s128-c0x00000000-cc-rp-mo/photo.jpg",
+            "rating" : 5,
+            "relative_time_description" : "2 weeks ago",
+            "text" : "Pricey place, but great food and service. Worth every penny.",
+            "time" : 1518105443
+         },
+         {
+            "author_name" : "Tony Johnson",
+            "author_url" : "https://www.google.com/maps/contrib/103992259500431247285/reviews",
+            "language" : "en",
+            "profile_photo_url" : "https://lh4.googleusercontent.com/-ftdsSgpCqOs/AAAAAAAAAAI/AAAAAAAAAg0/amY7w7SRIkg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+            "rating" : 4,
+            "relative_time_description" : "4 weeks ago",
+            "text" : "Food is always excellent. Great service as well.",
+            "time" : 1517098605
+         },
+         {
+            "author_name" : "Xavier Jimenez",
+            "author_url" : "https://www.google.com/maps/contrib/114496276106470830864/reviews",
+            "language" : "en",
+            "profile_photo_url" : "https://lh6.googleusercontent.com/-RmN21_c0Ebw/AAAAAAAAAAI/AAAAAAAAC5o/8yDx9Q-VxsY/s128-c0x00000000-cc-rp-mo/photo.jpg",
+            "rating" : 5,
+            "relative_time_description" : "a week ago",
+            "text" : "great food and good vibe for work related get togethers",
+            "time" : 1518806808
+         }
+      ],
+      "scope" : "GOOGLE",
+      "types" : [ "bar", "restaurant", "food", "point_of_interest", "establishment" ],
+      "url" : "https://maps.google.com/?cid=888128119634780159",
+      "utc_offset" : -480,
+      "vicinity" : "342 Howard Street, San Francisco",
+      "website" : "http://www.townhallsf.com/"
+   },
+   "status" : "OK"
+}

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Lightbox from '../../../lib/react-images';
 
 function SlideShowView(props) {
-  const gridViewButton = ( // for future modal grid gallery view
+  // for future modal grid gallery view
+  const gridViewButton = (
     <button
       className="grid-view-button"
       onClick={() => props.gridButtonClick()}
