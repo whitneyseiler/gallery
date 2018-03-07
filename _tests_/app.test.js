@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import { configure, mount, shallow } from 'enzyme';
+import MockAdapter from 'axios-mock-adapter';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import App from '../client/src/components/App';
-const testData = require('../data_test.js');
-const MockAdapter = require('axios-mock-adapter');
+import testData from '../data_test';
 
 configure({ adapter: new Adapter() });
 
