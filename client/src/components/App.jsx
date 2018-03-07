@@ -137,7 +137,8 @@ export default class App extends React.Component {
           <Gallery
             photos={this.state.mainGridImages}
             onClick={this.openLightbox}
-            columns={5}
+            columns={4}
+            margin={3}
           />
           <div
             className="photo-counter"

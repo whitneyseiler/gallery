@@ -2,7 +2,7 @@ import React from 'react';
 
 function TopNav() {
   return (
-    <div id="top-nav" style={{ height: 120, background: 'white' }}>
+    <div id="top-nav" style={{ height: 110, background: 'white' }}>
       <div id="logo">
         <img src="small_logo.png" alt="" className="logo" />
       </div>
