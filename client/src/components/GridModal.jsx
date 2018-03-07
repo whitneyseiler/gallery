@@ -1,3 +1,5 @@
+// currently not functioning
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-responsive-modal';
