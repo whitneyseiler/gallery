@@ -36,13 +36,13 @@ Duplicate config.example.js and rename it to config.js. Replace the placeholder 
 NOTE: You've now created the file referenced in seed.js as config.js that your app requires in order to seed the database.
 
 #Installation
-1. Install dependencies: -npm install
-2. Start database server: -npm run database
-3. Seed database: -npm run seed-database
-4. Run React Webpack: -npm run react-dev,
-5. Start server: -npm server
+1. Install dependencies: `-npm install`
+2. Start database server: `-npm run database`
+3. Seed database: `-npm run seed-database`
+4. Run React Webpack: `-npm run react-dev`,
+5. Start server: `-npm server`
 
 To start, in your browser navigate to: http://localhost:3001
 
 #Tests
-Run: npm test
+Run: `npm run test`
