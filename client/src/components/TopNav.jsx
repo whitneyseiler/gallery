@@ -6,6 +6,12 @@ function TopNav() {
       <div id="logo">
         <img src="small_logo.png" alt="" className="logo" />
       </div>
+      <div className="search-container">
+        <form>
+          <input type="text" placeholder="Find a great place near you" name="search" />
+          <button type="submit"><i className="fa fa-search" /></button>
+        </form>
+      </div>
       <div id="nav-buttons">
         <button className="nav-button">NEW & HOT</button>
         <button className="nav-button">CITY'S BEST</button>
