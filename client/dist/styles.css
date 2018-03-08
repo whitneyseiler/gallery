@@ -2,13 +2,7 @@
 Much of this functionality came from the react-images plugin (https:/github.com/jossmac/react-images)
 Any strange element classNames came from inspecting and altering the original react-images code. Someday, time permitting, I will fork the original repo and add my alterations as a contribution.
 */
-
-body {
-  background-color: #f1f1f2;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 0.195px;
-}
-
+/* 
 
 /**************************** Main page nav bar ******************************/
 

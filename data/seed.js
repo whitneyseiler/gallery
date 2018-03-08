@@ -1,7 +1,7 @@
 const data = require('./allData.js');
 const mongoose = require('mongoose');
 const Photos = require('../database/index.js');
-const API_KEY = require('../config.js');
+const API_KEY = 'AIzaSyCjAQ33tNqsfUoF1CV0TDw8GcoHqSf3dgo';
 
 mongoose.connect('mongodb://localhost/photos');
 

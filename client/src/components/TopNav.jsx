@@ -4,7 +4,7 @@ function TopNav() {
   return (
     <div id="top-nav" style={{ height: 110, background: 'white' }}>
       <div id="logo">
-        <img src="small_logo.png" alt="" className="logo" />
+        <img src="http://res.cloudinary.com/madlicorice/image/upload/v1520454562/small_logo.png" alt="" className="logo" />
       </div>
       <div className="search-container">
         <form>
