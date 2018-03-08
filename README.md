@@ -13,7 +13,7 @@ Photo Gallery component of WeGot, a clone of the food review site Zagat.com. Thi
 1. [Purpose](#purpose)
 1. [Database](#database)
 1. [Prerequisites](#prerequisites)
-1. [Google API Key](#Google API Key)
+1. [APIKey](#GoogleAPIKey)
 1. [Installation](#Installation)
 1. [Tests](#tests)
 
@@ -26,7 +26,7 @@ A MongoDB database that holds restaurant information.
 #Prerequisites
 -npm -node -jest -webpack -MongoDB
 
-#Google API Key
+#APIKey
 To seed the database for the application, you will need a Google API key.
 
 You can get an API Key from Google here: https://developers.google.com/maps/documentation/javascript/get-api-key
