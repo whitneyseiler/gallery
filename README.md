@@ -5,39 +5,45 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/bamboo-connection/recommendations
+  - https://github.com/bamboo-connection/overview
+  - https://github.com/bamboo-connection/map-side-bar
 
 ## Table of Contents
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+1. [Purpose](#purpose)
+1. [Database](#database)
+1. [Prerequisites](#prerequisites)
+1. [Google API Key](#Google API Key)
+1. [Installation](#Installation)
+1. [Tests](#tests)
 
-## Usage
+#Purpose
+This service forms a part of the WeGot food review website. It renders 6 recommended restaurants based on proximity to the current restaurant selected showing basic information about a restaurant, including the name, description, type, neighborhood, price level, WeGot and Google reviews summary. Clicking on the restaurant will take you to the newly selected restaurant page.
 
-> Some usage instructions
+#Database
+A MongoDB database that holds restaurant information.
 
-## Requirements
+#Prerequisites
+-npm -node -jest -webpack -MongoDB
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+#Google API Key
+To seed the database for the application, you will need a Google API key.
 
-- Node 6.13.0
-- etc
+You can get an API Key from Google here: https://developers.google.com/maps/documentation/javascript/get-api-key
 
-## Development
+Duplicate config.example.js and rename it to config.js. Replace the placeholder strings in your newly created config.js with your Google API key.
 
-### Installing Dependencies
+NOTE: You've now created the file referenced in seed.js as config.js that your app requires in order to seed the database.
 
-From within the root directory:
+#Installation
+1. Install dependencies: npm install
+2. Start database server: npm run database
+3. Seed database: npm run seed-database
+4. Run React Webpack:npm run react-dev,
+5. Start server: npm server
 
-```sh
-npm install -g webpack
-npm install
-```
+To start, in your browser navigate to: http://localhost:3001
 
-=======
-# WeGot-WhitneyProxy
->>>>>>> 7881e60e0964b73bbd079f13b01c5eccabc9a5b1
+#Tests
+Run: npm test
