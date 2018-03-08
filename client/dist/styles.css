@@ -2,22 +2,24 @@
 Much of this functionality came from the react-images plugin (https:/github.com/jossmac/react-images)
 Any strange element classNames came from inspecting and altering the original react-images code. Someday, time permitting, I will fork the original repo and add my alterations as a contribution.
 */
-/* 
+/*
 
 /**************************** Main page nav bar ******************************/
 
+body{
+  background-color: #f1f1f2;
+}
+
 .top-nav {
   width: 100%;
-  min-height: 120px;
+  height: 20px;
   background-color: white;
-  display: block;
-  overflow: hidden;
 }
 
 .logo {
   width: 16%;
   float: left;
-  padding: 14px 20px 10px 20px;
+  padding: 10px 10px 0px 10px;
 }
 
 .logo:hover {
@@ -28,9 +30,9 @@ Any strange element classNames came from inspecting and altering the original re
   background: none;
   color: #656666;
   border: none;
-  font-size: 22px;
+  font-size: 16px;
   float: right;
-  padding: 40px 40px 0 40px;
+  padding: 25px 25px 0 0;
   letter-spacing: 0.2px;
 }
 
@@ -47,20 +49,20 @@ Any strange element classNames came from inspecting and altering the original re
 }
 
 input[type=text] {
-  padding: 40px 40px 40px 20px;
-  font-size: 22px;
+  padding: 25px 25px 10px 25px;
+  font-size: 14px;
   border: none;
   letter-spacing: 0.3px;
   color: #656666;
   font-weight: 200;
-  width: 300px;
+  width: 200px;
 }
 
 .search-container button {
   float: left;
-  padding: 35px 0 10px 40px;
+  padding: 20px 0 20px 20px;
   background: white;
-  font-size: 24px;
+  font-size: 16px;
   border: none;
   color: grey;
 }
