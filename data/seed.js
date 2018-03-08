@@ -1,6 +1,7 @@
 const data = require('./allData.js');
 const mongoose = require('mongoose');
 const Photos = require('../database/index.js');
+const API_KEY = require('../config.js');
 
 mongoose.connect('mongodb://localhost/photos');
 
@@ -15,7 +16,6 @@ function seedDb() {
     // push photo details to entry
     const photos = place.result.photos;
     const PHOTOS_URL = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=';
-    const API_KEY = 'AIzaSyCjAQ33tNqsfUoF1CV0TDw8GcoHqSf3dgo';
 
     for (let i = 0; i < photos.length; i += 1) {
       const photoRef = photos[i].photo_reference;
