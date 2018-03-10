@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 
+mongoose.connect('mongodb://database/photos');
+
 const Photos = require('../database/index.js');
 
 const app = express();
@@ -24,6 +26,7 @@ app.get('/', (req, res) => {
 // retrieve data from API(db)
 app.get('/api/restaurants/:id/gallery', (req, res) => {
   const id = req.params.id;
+  console.log('server querying for id: ', id)
   Photos.findOne(id, (err, data) => {
     if (err) {
       res.sendStatus(500);
@@ -33,6 +36,6 @@ app.get('/api/restaurants/:id/gallery', (req, res) => {
   });
 });
 
-app.listen(3001, () => console.log('Example app listening on port 3001!'));
+app.listen(3001, () => console.log('Gallery App listening on port 3001!'));
 
 module.exports = app;

@@ -35,6 +35,7 @@ export default class App extends React.Component {
           data: response.data[0],
           siteName: response.data[0].place_name,
         });
+        console.log('client received data from id: ', id);
       })
       .then(() => {
         this.setReviewsState();
