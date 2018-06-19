@@ -3,12 +3,13 @@ import axios from 'axios';
 import Gallery from '../../../lib/react-photo-gallery';
 import SlideShowView from './SlideShowView';
 import TopNav from './TopNav';
+import sampleData from '../sampleData.js';
 
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: [],
+      data: sampleData,
       siteName: '',
       reviews: [],
       photos: [],
@@ -26,16 +27,14 @@ export default class App extends React.Component {
   // send GET request to server on page load
   componentDidMount() {
     const context = this;
-    // const id = this.state.currentSite;
     const id = window.location.href.split('/')[4];
-
+    
     axios.get(`/api/restaurants/${id}/gallery`)
       .then((response) => {
         context.setState({
           data: response.data[0],
           siteName: response.data[0].place_name,
         });
-        console.log('client received data from id: ', id);
       })
       .then(() => {
         this.setReviewsState();
@@ -131,17 +130,16 @@ export default class App extends React.Component {
       <div id="main-app">
         <div className="gallery" >
           <TopNav />
-          <Gallery
-            photos={this.state.mainGridImages}
-            onClick={this.openLightbox}
-            columns={4}
-            margin={3}
-          />
-          <div
-            className="photo-counter"
-            onClick={this.galleryImageCountClick}
-            role="presentation"
-          >{photoCount} PHOTOS &#43;
+          <div id="gallery-container">
+            <Gallery
+              photos={this.state.mainGridImages}
+              onClick={this.openLightbox}
+              columns={4}
+              margin={3}
+            />
+            <div className="photo-counter" onClick={this.galleryImageCountClick} role="presentation">
+              {photoCount} PHOTOS &#43;
+            </div>
           </div>
         </div>
         <SlideShowView

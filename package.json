@@ -1,8 +1,8 @@
 {
-  "name": "movielist",
+  "name": "gallery",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "server": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
