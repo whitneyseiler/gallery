@@ -8,13 +8,7 @@ Any strange element classNames came from inspecting and altering the original re
 
 body{
   background-color: #f1f1f2;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-html {
-  box-sizing: border-box;
+  margin: 0;
 }
 
 #top-nav, .nav-items, .top{
@@ -22,7 +16,6 @@ html {
   background-color: white;
   display: flex;
   flex-direction: row;
-  margin: .2rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -35,6 +28,7 @@ html {
   height: 50px;
   flex-shrink: 1;
   margin-right: auto;
+  padding: 5px 10px 0px 10px;
 }
 
 #top-nav a {
@@ -43,11 +37,12 @@ html {
   border: none;
   font-size: 16px;
   letter-spacing: 0.2px;
-  margin: 0 .55rem;
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
+  margin: 20px 20px 0 0;
+  font-family: 'Roboto-light', sans-serif;
+  font-weight: 300;
 }
 
 #top-nav a:hover {
@@ -103,8 +98,6 @@ html {
 /*************************** Nav Bar Search Form ******************************/
 
 #search-container {
-  margin: 0 1 rem;
-  margin-right: auto;
   flex-grow: 1;
   flex-shrink: 2;
   align-items: center;
@@ -115,16 +108,15 @@ html {
 input {
   font-size: 14px;
   border: none;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
   letter-spacing: 0.3px;
   color: #656666;
   font-weight: 200;
   width: 100%;
-  padding: .4rem;
-  border-right: 1px solid grey;
-  border-left: 1px solid grey;
   background-color: white;
   background-image: url('https://www.w3schools.com/css/searchicon.png');
-  background-size: 20px;
+  background-size: 18px;
   background-position: 10px; 
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
