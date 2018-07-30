@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-# Project Name
+![alt text](https://i.imgur.com/JWkqRnO.jpg)
+
+# Galley Microservice
 Photo Gallery component of WeGot, a clone of the food review site Zagat.com. This was part of a team project completed at Hack Reactor.
 
 #Quick Demo
